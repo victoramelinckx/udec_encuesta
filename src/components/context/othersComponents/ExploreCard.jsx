@@ -13,11 +13,16 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
     } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
     onClick={() => handleClick(id)}
   >
-    <img
-      src={imgUrl}
-      alt="planet-04"
-      className="absolute w-full h-full object-cover rounded-[24px]"
-    />
+    <div className="absolute w-full h-full">
+      <Image
+        src={imgUrl}
+        alt="planet-04"
+        width={1000}
+        height={1000}
+        layout="responsive"
+        className="rounded-[24px]"
+      />
+    </div>
     {active !== id ? (
       <h3 className="font-semibold sm:text-[16px] text-[26px] text-white absolute z-0 md:bottom-2 sm:bottom-3 bottom-20 md:rotate-[0deg] rotate-[-90deg] origin-[0,0]">
         {title}
@@ -46,5 +51,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
     )}
   </motion.div>
 );
+
+
 
 export default ExploreCard;
