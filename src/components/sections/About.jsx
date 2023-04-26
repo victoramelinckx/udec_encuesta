@@ -24,16 +24,16 @@ const About = () => (
       >
         <span className="font-extrabold text-dark dark:text-light">
           IQ Zone</span>
-          is your child's key to unlocking academic success and realizing their full potential. 
-         Our one-on-one tutoring approach, combined with innovative methodologies, 
-         helps students feel confident and excel in the world of learning.
-        At <span className="font-extrabold text-dark dark:text-light">IQ Zone</span>,
-        we empower children to overcome challenges and embrace the 
-        <span className="font-extrabold text-dark dark:text-light">excitement of education</span>
-        by providing tailored support for all K-12 subjects.
-        With our certified and experienced educators, you can trust that your child's academic dreams will become a reality.
-        Let's <span className="font-extrabold text-dark dark:text-light">discover</span>
-         your child's potential together by scrolling down.
+          {" is your child's key to unlocking academic success and realizing their full potential. "}
+         {"Our one-on-one tutoring approach, combined with innovative methodologies, "}
+         {"helps students feel confident and excel in the world of learning."}
+        {"At "} <span className="font-extrabold text-dark dark:text-light">{"IQ Zone"}</span>{", "}
+        {"we empower children to overcome challenges and embrace the "}
+        <span className="font-extrabold text-dark dark:text-light">{"excitement of education"}</span>
+        {" by providing tailored support for all K-12 subjects."}
+        {"With our certified and experienced educators, you can trust that your child's academic dreams will become a reality."}
+        {"Let's "} <span className="font-extrabold text-dark dark:text-light">{"discover"}</span>
+         {" your child's potential together by scrolling down."}
       </motion.p>
 
       <motion.div
@@ -46,7 +46,7 @@ const About = () => (
     </motion.div>
 
     </div>
-    
+
   </section>
 );
 

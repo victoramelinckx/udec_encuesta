@@ -72,22 +72,22 @@ const getTestimonials = () => {
       rating: 4.5,
     },
     {
-      name: 'John Doe',
+      name: 'Jane Smith',
       testimonial: 'Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever',
       rating: 4.5,
     },
     {
-      name: 'John Doe',
+      name: 'Mark Johnson',
       testimonial: 'Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever',
       rating: 5,
     },
     {
-      name: 'John Doe',
+      name: 'Sara Adams',
       testimonial: 'Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever',
       rating: 4.5,
     },
     {
-      name: 'John Doe',
+      name: 'David Brown',
       testimonial: 'Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever',
       rating: 3.5,
     }
@@ -95,14 +95,13 @@ const getTestimonials = () => {
 
   const primaryColor = "#0464eb";
 
-  return data.map(({ name, testimonial, rating }) => (
-    <div className='w-[100%] mx-auto relative lg:w-[95%] md:w-[85%]'>
+  return data.map(({ name, testimonial, rating }, index) => (
+    <div className='w-[100%] mx-auto relative lg:w-[95%] md:w-[85%]' key={index}>
       <div
         className="bg-dark/10 dark:bg-light/5 cursor-pointer p-8 group-hover:blur-sm hover:!blur-none transform 
         group-hover:scale-85 hover:!scale-100 transition-all duration-500 rounded-xl
         min-w-[300px] md:min-w-[250px] sm:min-w-[180px] xs:min-w-[140px]
         "
-        key={name}
       >
         <Image
           src={profilePic}
@@ -122,15 +121,10 @@ const getTestimonials = () => {
           starSpacing="2px"
           className="items-center"
         />
-        {/* <button className="bg-dark items-center dark:bg-light text-bold text-light dark:text-dark py-2.5 px-8 lg:py-2 lg:px-6 md:py-1.5 md:px-4 sm:py-1 sm:px-3 rounded-full">
-          {buttonLabel}
-        </button> */}
       </div>
     </div>
-    
   ));
-  
-  
 };
 
 export default Testimonial;
+

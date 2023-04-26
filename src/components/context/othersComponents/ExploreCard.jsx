@@ -2,6 +2,8 @@
 import { motion } from 'framer-motion';
 import styles from '../../context/styless';
 import { fadeIn } from '../../../../utils/motion';
+import Image from 'next/image';
+
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   <motion.div
@@ -25,11 +27,14 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
         <div
           className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
         >
-          <img
-            src="/images/sections/headset.svg"
-            alt="headset"
-            className="w-1/2 h-1/2 object-contain"
-          />
+          <div className="w-1/2 h-1/2">
+            <Image
+              src="/images/sections/headset.svg"
+              alt="headset"
+              width={30}
+              height={30}
+            />
+          </div>
         </div>
         <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
           Enter Metaverse

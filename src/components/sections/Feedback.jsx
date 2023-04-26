@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from '../../components/context/styless';
 import { staggerContainer, fadeIn, zoomIn } from '../../../utils/motion';
 
@@ -26,32 +27,35 @@ const Feedback = () => (
         </div>
 
         <p className="mt-[24px] font-normal sm:text-[18px] text-[23px] sm:leading-[25.6px] leading-[39.6px] text-dark dark:text-light">
-          “Inspired by my family of educators, 
-          I founded IQ Zone to help students thrive academically. 
-          Join us in unlocking your child's potential through
-          innovative tools and personalized tutoring.”
+          {"“Inspired by my family of educators, "}
+          {"I founded IQ Zone to help students thrive academically. "}
+          {"Join us in unlocking your child's potential through"}
+          {"innovative tools and personalized tutoring.”"}
         </p>
       </motion.div>
-
 
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}
         className="relative flex-1 flex justify-center items-center"
       >
-        <img
+        <Image
           src="/founder.jpg"
           alt="planet-09"
-          className="w-full h-[610px] min-h-[210px] object-cover rounded-[40px]"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-[40px]"
         />
 
         <motion.div
           variants={zoomIn(0.4, 1)}
           className="hidden md:block absolute -left-[10%] top-[3%]"
         >
-          <img
+          <Image
             src="/images/sections/stamp.png"
             alt="stamp"
-            className="w-[155px] h-[155px] object-contain"
+            width={155}
+            height={155}
+            objectFit="contain"
           />
         </motion.div>
       </motion.div>
