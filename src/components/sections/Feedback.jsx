@@ -28,7 +28,7 @@ const Feedback = () => (
         <p className="mt-[24px] font-normal sm:text-[18px] text-[23px] sm:leading-[25.6px] leading-[39.6px] text-dark dark:text-light">
           “Inspired by my family of educators, 
           I founded IQ Zone to help students thrive academically. 
-          Join us in unlocking your child's potential through
+          Join us in unlocking your child&apos;s potential through
           innovative tools and personalized tutoring.”
         </p>
       </motion.div>
