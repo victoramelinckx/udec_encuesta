@@ -20,6 +20,8 @@ module.exports = {
       colors:{
         dark: "#1b1b1b",
         light: "#f5f5f5",
+        iqzone: "#fcb045",
+        iqblue: "#0464eb",
         primary: "#0464eb", // 240,86,199
         primaryDark: "#0464eb", // 80,230,217
       },

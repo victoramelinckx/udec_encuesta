@@ -28,7 +28,7 @@ const Testimonial = () => {
             xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl"
           />
           <TypingText
-            title="| Read What Our Students Have to Say"
+            title={<>| read what Our Students Have To Say</>}
             textStyles="mt-4 text-center dark:text-light/50"
           />
         </motion.div>

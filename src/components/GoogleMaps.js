@@ -6,6 +6,7 @@ import { TypingText, TitleText } from '../components/context/othersComponents';
 import styles from '../components/context/styless';
 import { staggerContainer, fadeIn } from '../../utils/motion';
 import darkMapStyle from './MapStyle';
+import Link from 'next/link';
 
 const defaultCenter = { lat: 25.82682890067057, lng: -80.35751778628457 }; // Replace with your desired location
 const defaultZoom = 16;
@@ -65,15 +66,16 @@ const MyGoogleMap = () => {
           </div>
         </motion.div>
         <div className="flex justify-center mt-6">
-          <button
-            type="submit"
-            className="flex items-center h-fit py-4 px-6 bg-dark/10 hover:scale-105 dark:bg-light/10 dark:text-light rounded-[32px] gap-[12px]"
-            onClick={copyToClipboard}
-          >
-            <span className="font-normal text-[16px] text-dark dark:text-light">
+        <button
+          type="submit"
+          className="flex items-center h-fit py-4 px-6 bg-dark/10 hover:scale-105 dark:bg-light/10 dark:text-light rounded-[32px] gap-[12px]"
+        >
+          <Link href="https://www.google.com/maps/place/I.Q.ZONE/@25.8269685,-80.3558365,19z/data=!3m1!4b1!4m6!3m5!1s0x88d9b954d29939f7:0x3a3b6538667a5009!8m2!3d25.8269673!4d-80.3551928!16s%2Fg%2F1wnf1vmc">
+            <a className="font-normal text-[16px] text-dark dark:text-light">
               Location
-            </span>
-          </button>
+            </a>
+          </Link>
+        </button>
         </div>
       </motion.div>
 

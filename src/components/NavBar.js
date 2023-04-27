@@ -10,6 +10,8 @@ import {
   SunIcon,
   MoonIcon,
   TranslateIcon,
+  FacebookIcon,
+  InstagramIcon,
 } from "./Icons";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
@@ -108,31 +110,30 @@ const NavBar = () => {
         <nav className="flex items-center justify-center">
           <CustomLink href="/main" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink href="/projects" title="Projects" className="mx-4" />
-          <CustomLink href="/articles" title="Articles" className="ml-4" />
+          <CustomLink href="/articles" title="Store" className="mx-4" />
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
-          <motion.a
-            href="https://twitter.com"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mr-3"
-          >
-            <TwitterIcon />
-          </motion.a>
-          <motion.a
-            href="https://twitter.com"
+        <motion.a
+            href="https://www.instagram.com/iqzone/"
             target={"_blank"}
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            <GithubIcon />
+            <InstagramIcon />
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://www.facebook.com/iqzoness"
+            target={"_blank"}
+            className="w-6 mx-3 bg-light rounded-full"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FacebookIcon />
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/company/iqzone-plus/"
             target={"_blank"}
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
@@ -140,27 +141,9 @@ const NavBar = () => {
           >
             <LinkedInIcon />
           </motion.a>
-          <motion.a
-            href="https://twitter.com"
-            target={"_blank"}
-            className="w-6 mx-3 bg-light rounded-full"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <PinterestIcon />
-          </motion.a>
-          <motion.a
-            href="https://twitter.com"
-            target={"_blank"}
-            className="w-6 mx-3"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <DribbbleIcon />
-          </motion.a>
 
           <motion.a
-            href="https://twitter.com"
+            href="/"
             target={"_blank"}
             className="w-6 mx-3"
             whileHover={{ y: -2 }}

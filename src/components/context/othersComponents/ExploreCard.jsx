@@ -13,16 +13,11 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
     } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
     onClick={() => handleClick(id)}
   >
-    <div className="absolute w-full h-full">
-      <Image
-        src={imgUrl}
-        alt="planet-04"
-        width={1000}
-        height={1000}
-        layout="responsive"
-        className="rounded-[24px]"
-      />
-    </div>
+    <img
+      src={imgUrl}
+      alt="planet-04"
+      className="absolute w-full h-full object-cover rounded-[24px]"
+    />
     {active !== id ? (
       <h3 className="font-semibold sm:text-[16px] text-[26px] text-white absolute z-0 md:bottom-2 sm:bottom-3 bottom-20 md:rotate-[0deg] rotate-[-90deg] origin-[0,0]">
         {title}
@@ -32,14 +27,11 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
         <div
           className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
         >
-          <div className="w-1/2 h-1/2">
-            <Image
-              src="/images/sections/headset.svg"
-              alt="headset"
-              width={30}
-              height={30}
-            />
-          </div>
+          <img
+            src="/images/sections/headset.svg"
+            alt="headset"
+            className="w-1/2 h-1/2 object-contain"
+          />
         </div>
         <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
           Enter Metaverse
@@ -51,7 +43,5 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
     )}
   </motion.div>
 );
-
-
 
 export default ExploreCard;
