@@ -62,7 +62,7 @@ export default function LandingTwo() {
           </div>
         </div>
 
-        <div className='w-[20%] lg:w-[50%] md:w-[45%] sm:w-[70%] justify-center pt-10'>
+        <div className='w-[30%] lg:w-[50%] md:w-[45%] sm:w-[70%] justify-center pt-10'>
         
         <CustomButton href="/store" text="Born 2 Learn" imageUrl="/Schools/1.jpg" />
         <CustomButton href="/main" text="Dr Rolando Espinosa K-8" imageUrl="/Schools/2.jpg" />

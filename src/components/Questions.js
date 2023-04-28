@@ -32,7 +32,7 @@ const MovingImg = ({ title, img, width, height, index }) => {
         onMouseLeave={handleMouseLeave}
         className="relative cursor-pointer"
       >
-        <h2 className="capitalize text-xl font-semibold hover:underline">
+        <h2 className="capitalize text-xl sm:text-base font-semibold hover:underline">
           {title}
         </h2>
         <FramerImage
@@ -51,9 +51,9 @@ const MovingImg = ({ title, img, width, height, index }) => {
   );
 };
 
-
 const FrequentlyQuestions = () => {
   const questions = [
+    // ... questions array ...
     {
       title: "How can I pay?",
       img: "/iqzone/logoblueonly.png",
@@ -96,28 +96,48 @@ const FrequentlyQuestions = () => {
       width: 200,
       height: 150,
     }
-    
-    // Add more questions here...
   ];
+
+  const [openedQuestion, setOpenedQuestion] = useState(-1);
 
   return (
     <div className='my-18'>
-      
       <TypingText title="| Questions You Might Have" textStyles=" mb-1 text-center dark:text-light/50" />
       <h2 className='font-bold text-8xl mb-12 w-full text-center md:text-6xl xs:text-4xl md:mb-12 dark:text-light'>
         Questions
       </h2>
       <div className='w-[75%] mx-auto relative lg:w-[80%] md:w-[85%]'>
         {questions.map((question, index) => (
-          <QuestionItem key={index} {...question} index={index} />
+          <QuestionItem
+            key={index}
+            {...question}
+            index={index}
+            openedQuestion={openedQuestion}
+            setOpenedQuestion={setOpenedQuestion}
+          />
         ))}
       </div>
     </div>
   );
 };
 
-const QuestionItem = ({ title, img, answer, width, height, index }) => {
-  const [showText, setShowText] = useState(false);
+const QuestionItem = ({
+  title,
+  img,
+  answer,
+  width,
+  height,
+  index,
+  openedQuestion,
+  setOpenedQuestion,
+}) => {
+  const handleClick = () => {
+    if (openedQuestion === index) {
+      setOpenedQuestion(-1);
+    } else {
+      setOpenedQuestion(index);
+    }
+  };
 
   return (
     <>
@@ -129,36 +149,34 @@ const QuestionItem = ({ title, img, answer, width, height, index }) => {
           justify-between bg-light text-dark first:mt-0 border border-solid border-dark
           border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light
           sm:flex-row cursor-pointer"
-        onClick={() => setShowText(!showText)}
+        onClick={handleClick}
       >
         <MovingImg title={title} img={img} width={width} height={height} />
         <span
           className="text-primary font-bold pl-4 dark:text-primaryDark sm:pl-0 xs:text-sm text-2xl"
-          onClick={() => setShowText(!showText)}
+          onClick={handleClick}
           >
             +
           </span>
       </motion.li>
   
-      {showText && (
+      {openedQuestion === index && (
         <motion.div
           initial={{ y: 200 }}
           whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
           viewport={{ once: true }}
           className="relative w-full p-4 py-6 my-2 rounded-xl bg-light text-dark first:mt-0 border border-solid border-dark
             border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light"
-          onClick={() => setShowText(!showText)}
+          onClick={handleClick}
         >
-          <p className=" text-l font-semibold mb-2">
+          <p className=" text-l sm:text-sm font-semibold mb-2">
             {answer}
           </p>
         </motion.div>
       )}
     </>
-    );
+  );
 };
   
 export default FrequentlyQuestions;
-  
-
 
