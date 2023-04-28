@@ -19,9 +19,9 @@ const Footer = () => {
         underline-offset-2
         '>
         Build with <span className='text-primary text-2x1 px-1 dark:text-primaryDark'>&#9825;</span>
-        by&nbsp;<Link href="/" className='underline
+        by&nbsp;<p href="/" className='underline
         underline-offset-2' 
-        target={"_blank"}>Iq Zone</Link>
+        target={"_blank"}>Iq Zone</p>
         </Link>
       </Layout>
     </footer>

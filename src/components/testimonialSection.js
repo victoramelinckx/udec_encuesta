@@ -38,7 +38,7 @@ const Testimonial = () => {
           spaceBetween={20}
           navigation={testimonials.length > 3 ? true : false}
           className="w-full"
-          containerClassName={mode === 'dark' ? 'swiper-dark' : 'swiper-light'}
+          containerclassname={mode === 'dark' ? 'swiper-dark' : 'swiper-light'}
           style={{
             '--swiper-navigation-color': arrowColor,
             '--swiper-navigation-size': '22px',
@@ -91,11 +91,11 @@ const getTestimonials = () => {
       testimonial: 'Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever Lorem ipsu whatever',
       rating: 3.5,
     }
-  ];
+  ].map((item, index) => ({ ...item, key: `testimonial-${index}` }));
 
   const primaryColor = "#0464eb";
 
-  return data.map(({ name, testimonial, rating }, index) => (
+  return data.map(({ name, testimonial, rating, key }, index) => (
     <div className='w-[100%] mx-auto relative lg:w-[95%] md:w-[85%]' key={index}>
       <div
         className="bg-dark/10 dark:bg-light/5 cursor-pointer p-8 group-hover:blur-sm hover:!blur-none transform 
@@ -113,6 +113,7 @@ const getTestimonials = () => {
           {testimonial}
         </p>
         <StarRatings
+          key={key}
           rating={rating}
           starRatedColor={primaryColor}
           numberOfStars={5}
