@@ -6,10 +6,11 @@ import { TypingText, TitleText } from '../components/context/othersComponents';
 
 const FramerImage = motion(Image);
 
-const MovingImg = ({ title, img, width, height }) => {
+const MovingImg = ({ title, img, width, height, index }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const imgRef = useRef(null);
+  const zIndex = 10 - index;
 
   function handleMouse(event) {
     const boundingRect = event.currentTarget.getBoundingClientRect();
@@ -18,7 +19,6 @@ const MovingImg = ({ title, img, width, height }) => {
     y.set(event.clientY - boundingRect.top - 10);
   }
   
-
   function handleMouseLeave(event) {
     imgRef.current.style.display = "none";
     x.set(0);
@@ -36,7 +36,7 @@ const MovingImg = ({ title, img, width, height }) => {
           {title}
         </h2>
         <FramerImage
-          style={{ x: x, y: y }}
+          style={{ x: x, y: y, zIndex: zIndex }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
           ref={imgRef}
@@ -44,12 +44,13 @@ const MovingImg = ({ title, img, width, height }) => {
           alt={title}
           width={width}
           height={height}
-          className="z-10 h-auto hidden absolute rounded-lg md:!hidden"
+          className=" z-50 h-auto hidden absolute rounded-lg md:!hidden"
         />
       </div>
     </div>
   );
 };
+
 
 const FrequentlyQuestions = () => {
   const questions = [
@@ -100,10 +101,10 @@ const FrequentlyQuestions = () => {
   ];
 
   return (
-    <div className='my-64'>
+    <div className='my-18'>
       
       <TypingText title="| Questions You Might Have" textStyles=" mb-1 text-center dark:text-light/50" />
-      <h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 dark:text-light'>
+      <h2 className='font-bold text-8xl mb-12 w-full text-center md:text-6xl xs:text-4xl md:mb-12 dark:text-light'>
         Questions
       </h2>
       <div className='w-[75%] mx-auto relative lg:w-[80%] md:w-[85%]'>

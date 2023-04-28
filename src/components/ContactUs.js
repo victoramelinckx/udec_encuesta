@@ -56,7 +56,7 @@ const GetInTouch = () => {
   
 
   return (
-    <div className='w-[75%] mx-auto relative lg:w-[90%] md:w-[90%] sm:w-[80%]'>
+    <div className='w-[75%] mx-auto relative lg:w-[90%] md:w-[90%] sm:w-[80%] my-18'>
       <motion.div
         variants={footerVariants}
         initial="hidden"

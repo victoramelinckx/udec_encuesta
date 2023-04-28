@@ -44,9 +44,9 @@ const MyGoogleMap = () => {
         />
         <motion.div
           variants={fadeIn('up', 'tween', 0.3, 1)}
-          className="relative mt-[68px] flex w-full h-[550px] rounded"
+          className="relative mt-[24px] flex w-full h-[400px] sm:h-[300px] rounded"
         >
-          <div className="w-full h-full flex justify-center rounded-2xl overflow-hidden sm:h-[80%]">
+          <div className="w-full h-full flex justify-center rounded-2xl overflow-hidden sm:h-[90%]">
             <LoadScript googleMapsApiKey={apiKey}>
               <GoogleMap
                 mapContainerStyle={{
@@ -65,10 +65,10 @@ const MyGoogleMap = () => {
             </LoadScript>
           </div>
         </motion.div>
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-6 sm:mt-2">
         <button
           type="submit"
-          className="flex items-center h-fit py-4 sm:py-0 px-6 bg-dark/10 hover:scale-105 dark:bg-light/10 dark:text-light rounded-[32px] gap-[12px]"
+          className="flex items-center h-fit py-4 px-6 bg-dark/10 hover:scale-105 dark:bg-light/10 dark:text-light rounded-[32px] gap-[12px]"
         >
           <Link href="https://www.google.com/maps/place/I.Q.ZONE/@25.8269685,-80.3558365,19z/data=!3m1!4b1!4m6!3m5!1s0x88d9b954d29939f7:0x3a3b6538667a5009!8m2!3d25.8269673!4d-80.3551928!16s%2Fg%2F1wnf1vmc">
             <div className="font-semibold text-[16px] text-dark dark:text-light">
