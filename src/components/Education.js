@@ -39,7 +39,7 @@ const Education = () => {
   return (
     <div className='my-64'>
       <h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
-        Education
+        Services
       </h2>
 
       <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
@@ -52,29 +52,26 @@ const Education = () => {
 
         <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
 
-          <Details
-          type="Bachelor Of Science In Computer Science" 
-          time="2016-2020"
-          place="Massachusetts Institute Of Technology (MIT)"
-          info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-          />
+        <Details
+          type="One on One Lessons"
+          time="6-20+ years old"
+          place="IQ Zone Plus"
+          info="Personalized lessons tailored to each student's individual needs and learning pace, covering a wide range of subjects and skills. Our experienced instructors work closely with students to help them achieve their academic and personal goals."
+        />
 
-          <Details
-          type="Bachelor Of Science In Computer Science" 
-          time="2016-2020"
-          place="Massachusetts Institute Of Technology (MIT)"
-          info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-          />
+        <Details
+          type="Morning Micro School"
+          time="6-20+ years old"
+          place="IQ Zone Plus"
+          info="A small-group learning environment that focuses on fostering creativity, critical thinking, and collaboration. Morning Micro School is designed to complement traditional schooling by offering engaging, project-based learning experiences in a supportive and interactive setting."
+        />
 
-          <Details
-          type="Bachelor Of Science In Computer Science" 
-          time="2016-2020"
-          place="Massachusetts Institute Of Technology (MIT)"
-          info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-          />
+        <Details
+          type="SAT / ACT / FSA Prep"
+          time="14-20+ years old"
+          place="IQ Zone Plus"
+          info="Our comprehensive test preparation program aims to equip students with the knowledge, strategies, and confidence needed to excel in the SAT, ACT, and FSA exams. Our expert instructors provide personalized guidance, insights, and practice materials to help students reach their full potential."
+        />
 
         </ul>
 

@@ -38,7 +38,7 @@ const MyGoogleMap = () => {
         <TypingText title="| Where to find us" textStyles="text-center dark:text-light/50" />
         <TitleText
           title={
-            <>Find us in Doral at this specific location</>
+            <>Find us at Doral</>
           }
           textStyles="text-center dark:text-light"
         />
@@ -46,12 +46,12 @@ const MyGoogleMap = () => {
           variants={fadeIn('up', 'tween', 0.3, 1)}
           className="relative mt-[68px] flex w-full h-[550px] rounded"
         >
-          <div className="w-full h-full rounded-2xl overflow-hidden">
+          <div className="w-full h-full flex justify-center rounded-2xl overflow-hidden">
             <LoadScript googleMapsApiKey={apiKey}>
               <GoogleMap
                 mapContainerStyle={{
-                  width: '100%',
-                  height: '100%',
+                  width: '90%',
+                  height: '90%',
                   borderRadius: 'inherit',
                 }}
                 center={defaultCenter}
@@ -71,8 +71,8 @@ const MyGoogleMap = () => {
           className="flex items-center h-fit py-4 px-6 bg-dark/10 hover:scale-105 dark:bg-light/10 dark:text-light rounded-[32px] gap-[12px]"
         >
           <Link href="https://www.google.com/maps/place/I.Q.ZONE/@25.8269685,-80.3558365,19z/data=!3m1!4b1!4m6!3m5!1s0x88d9b954d29939f7:0x3a3b6538667a5009!8m2!3d25.8269673!4d-80.3551928!16s%2Fg%2F1wnf1vmc">
-            <div className="font-normal text-[16px] text-dark dark:text-light">
-              Location
+            <div className="font-semibold text-[16px] text-dark dark:text-light">
+              Get Location
             </div>
           </Link>
         </button>

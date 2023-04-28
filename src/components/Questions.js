@@ -2,19 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
+import { TypingText, TitleText } from '../components/context/othersComponents';
 
 const FramerImage = motion(Image);
 
-const MovingImg = ({ title, img, link, width, height }) => {
+const MovingImg = ({ title, img, width, height }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const imgRef = useRef(null);
 
   function handleMouse(event) {
+    const boundingRect = event.currentTarget.getBoundingClientRect();
     imgRef.current.style.display = "inline-block";
-    x.set(event.pageX);
-    y.set(-10);
+    x.set(event.clientX - boundingRect.left);
+    y.set(event.clientY - boundingRect.top - 10);
   }
+  
 
   function handleMouseLeave(event) {
     imgRef.current.style.display = "none";
@@ -23,7 +26,7 @@ const MovingImg = ({ title, img, link, width, height }) => {
   }
 
   return (
-    <Link href={link} passHref>
+    <div>
       <div
         onMouseMove={handleMouse}
         onMouseLeave={handleMouseLeave}
@@ -44,7 +47,7 @@ const MovingImg = ({ title, img, link, width, height }) => {
           className="z-10 h-auto hidden absolute rounded-lg md:!hidden"
         />
       </div>
-    </Link>
+    </div>
   );
 };
 
@@ -53,32 +56,53 @@ const FrequentlyQuestions = () => {
     {
       title: "How can I pay?",
       img: "/iqzone/logoblueonly.png",
-      link: "https://devdreaming.com/blogs/create-efficient-modal-react-portals",
-      answer: "Esto es una prueba. Esto deberia ser una resuesta a la pregunta de arriba, si es que es una pregunta",
-      width: 400,
-      height: 300,
+      answer: "Payments can be made at the store. You can call anytime during normal working hours.",
+      width: 200,
+      height: 150,
     },
     {
       title: "How long is one session?",
       img: "/iqzone/logoblueonly.png",
-      link: "https://devdreaming.com/blogs/create-efficient-modal-react-portals",
-      answer: "Esto es una prueba. Esto deberia ser una resuesta a la pregunta de arriba, si es que es una pregunta",
-      width: 400,
-      height: 300,
+      answer: "One session typically lasts for 60 minutes, but it can vary depending on the program and the individual needs of the student.",
+      width: 200,
+      height: 150,
     },
     {
-      title: "How long is one session?",
+      title: "What age group do you cater to?",
       img: "/iqzone/logoblueonly.png",
-      link: "https://devdreaming.com/blogs/create-efficient-modal-react-portals",
-      answer: "Esto es una prueba. Esto deberia ser una resuesta a la pregunta de arriba, si es que es una pregunta",
-      width: 400,
-      height: 300,
+      answer: "We cater to students from ages 6 to 20+ years old, offering personalized educational services for all K-12 subjects.",
+      width: 200,
+      height: 150,
     },
+    {
+      title: "Do you offer group sessions?",
+      img: "/iqzone/logoblueonly.png",
+      answer: "Yes, we offer group sessions, such as our Morning Micro School, which provides an enriching and engaging learning environment in a small-group setting.",
+      width: 200,
+      height: 150,
+    },
+    {
+      title: "What is the teacher-to-student ratio?",
+      img: "/iqzone/logoblueonly.png",
+      answer: "Our teacher-to-student ratio varies depending on the program. In one-on-one sessions, the ratio is 1:1, while in our Morning Micro School, we maintain a low teacher-to-student ratio to ensure personalized attention.",
+      width: 200,
+      height: 150,
+    },
+    {
+      title: "Do you provide support for standardized tests?",
+      img: "/iqzone/logoblueonly.png",
+      answer: "Yes, we offer comprehensive test preparation programs for standardized tests like the SAT, ACT, and FSA, helping students build knowledge, strategies, and confidence.",
+      width: 200,
+      height: 150,
+    }
+    
     // Add more questions here...
   ];
 
   return (
     <div className='my-64'>
+      
+      <TypingText title="| Questions You Might Have" textStyles=" mb-1 text-center dark:text-light/50" />
       <h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 dark:text-light'>
         Questions
       </h2>
@@ -91,8 +115,8 @@ const FrequentlyQuestions = () => {
   );
 };
 
-const QuestionItem = ({ title, img, link, answer, width, height, index }) => {
-  const [showText, setShowText] = useState(index===0);
+const QuestionItem = ({ title, img, answer, width, height, index }) => {
+  const [showText, setShowText] = useState(false);
 
   return (
     <>
@@ -106,7 +130,7 @@ const QuestionItem = ({ title, img, link, answer, width, height, index }) => {
           sm:flex-row cursor-pointer"
         onClick={() => setShowText(!showText)}
       >
-        <MovingImg title={title} img={img} link={link} width={width} height={height} />
+        <MovingImg title={title} img={img} width={width} height={height} />
         <span
           className="text-primary font-bold pl-4 dark:text-primaryDark sm:pl-0 xs:text-sm text-2xl"
           onClick={() => setShowText(!showText)}

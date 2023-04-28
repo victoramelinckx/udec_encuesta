@@ -22,15 +22,17 @@ const Testimonial = () => {
     <>
       <div className={`text-dark mb-20 ${mode === 'dark' ? 'dark:text-light' : ''}`}>
         <motion.div className="text-center py-10">
+          
+          <TypingText
+            title="| Read What Our Students Have To Say"
+            textStyles="mb-1 text-center dark:text-light/50"
+          />
           <AnimatedText
             text="Testimonials"
             className="!text-6xl
             xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl"
           />
-          <TypingText
-            title={<>| read what Our Students Have To Say</>}
-            textStyles="mt-4 text-center dark:text-light/50"
-          />
+        
         </motion.div>
         <div className="flex max-w-5xl mx-auto text-center group">
         <Swiper

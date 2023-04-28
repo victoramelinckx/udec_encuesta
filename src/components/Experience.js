@@ -59,45 +59,27 @@ const Experience = () => {
         <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
 
           <Details
-          position="Software Engineer" company="@Google" time="2022-Present"
-          companyLink="www.google.com"
-          address="Mountain View, CA"
+          position="Alexandra | CEO" company="IQZone" time="2004-Present"
+          companyLink="www.iqzone.com"
+          address="Teacher"
           work="Worked on a team responsible for developing new features for Google's 
           search engine, including improving the accuracy and relevance of search results and 
           developing new tools for data analysis and visualization."
           />
 
           <Details
-          position="Software Engineer" company="@Google" time="2022-Present"
-          companyLink="www.google.com"
-          address="Mountain View, CA"
+          position="David | CEO" company="IQZone" time="2004-Present"
+          companyLink="www.iqzone.com"
+          address="Engineer"
           work="Worked on a team responsible for developing new features for Google's 
           search engine, including improving the accuracy and relevance of search results and 
           developing new tools for data analysis and visualization."
           />
 
           <Details
-          position="Software Engineer" company="@Google" time="2022-Present"
-          companyLink="www.google.com"
-          address="Mountain View, CA"
-          work="Worked on a team responsible for developing new features for Google's 
-          search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization."
-          />
-
-          <Details
-          position="Software Engineer" company="@Google" time="2022-Present"
-          companyLink="www.google.com"
-          address="Mountain View, CA"
-          work="Worked on a team responsible for developing new features for Google's 
-          search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization."
-          />
-
-          <Details
-          position="Software Engineer" company="@Google" time="2022-Present"
-          companyLink="www.google.com"
-          address="Mountain View, CA"
+          position="Software Engineer" company="IQZone" time="2004-Present"
+          companyLink="www.iqzone.com"
+          address="Doral, FL"
           work="Worked on a team responsible for developing new features for Google's 
           search engine, including improving the accuracy and relevance of search results and 
           developing new tools for data analysis and visualization."
