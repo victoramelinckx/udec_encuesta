@@ -46,7 +46,7 @@ const MyGoogleMap = () => {
           variants={fadeIn('up', 'tween', 0.3, 1)}
           className="relative mt-[68px] flex w-full h-[550px] rounded"
         >
-          <div className="w-full h-full flex justify-center rounded-2xl overflow-hidden">
+          <div className="w-full h-full flex justify-center rounded-2xl overflow-hidden sm:h-[80%]">
             <LoadScript googleMapsApiKey={apiKey}>
               <GoogleMap
                 mapContainerStyle={{
