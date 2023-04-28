@@ -114,7 +114,7 @@ const NavBar = () => {
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
-        <motion.a
+          <motion.a
             href="https://www.instagram.com/iqzone/"
             target={"_blank"}
             className="w-6 mx-3"
@@ -190,64 +190,41 @@ const NavBar = () => {
               toggle={handleClick}
             />
             <CustomMobileLink
-              href="/projects"
-              title="Projects"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/articles"
-              title="Articles"
+              href="/store"
+              title="Store"
               className=""
               toggle={handleClick}
             />
           </nav>
 
           <nav className="flex items-center justify-center flex-wrap mt-2">
+
             <motion.a
-              href="https://twitter.com"
+              href="https://www.instagram.com/iqzone/"
               target={"_blank"}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 sm:mx-1"
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
+              className="w-6 mx-3 sm:mx-1"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <GithubIcon />
+              <InstagramIcon />
             </motion.a>
             <motion.a
-              href="https://twitter.com"
+              href="https://www.facebook.com/iqzoness"
+              target={"_blank"}
+              className="w-6 mx-3 bg-light rounded-full sm:mx-1"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FacebookIcon />
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/company/iqzone-plus/"
               target={"_blank"}
               className="w-6 mx-3 sm:mx-1"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
               <LinkedInIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <PinterestIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <DribbbleIcon />
             </motion.a>
 
             <button
@@ -257,9 +234,9 @@ const NavBar = () => {
               `}
             >
               {mode === "light" ? (
-              <SunIcon className={"fill-dark"} />
+              <SunIcon className={"fill-dark sm:mx-1"} />
               ) : (
-                <MoonIcon className={"fill-dark"} />
+                <MoonIcon className={"fill-dark sm:mx-1"} />
               )}
             </button>
           </nav>
