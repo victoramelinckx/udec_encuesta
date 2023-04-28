@@ -53,7 +53,7 @@ export default function Home() {
         />
       </Head>
       <TransitionEffect />
-      <main className='flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start overflow-y-auto'>
+      <main className='flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start'>
         <Layout className='pt-0 md:pt-16 sm:pt-16'>
            <div className="flex items-center justify-between w-full lg:flex-col">
                <div className='w-1/2 md:w-full'>
