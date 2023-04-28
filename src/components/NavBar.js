@@ -211,7 +211,7 @@ const NavBar = () => {
             <motion.a
               href="https://www.facebook.com/iqzoness"
               target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full sm:mx-1"
+              className="w-6 mx-3 sm:mx-1"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -233,7 +233,7 @@ const NavBar = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <TranslateIcon className={"dark:fill-light"}/>
+              <TranslateIcon />
             </motion.a>
 
             <button
