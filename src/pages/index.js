@@ -28,7 +28,7 @@ export default function LandingTwo() {
           <div className="text-center">
             <AnimatedText
               text="IQ Zone"
-              className="!text-2xl text-iqblue
+              className="!text-2xl text-iqblue !dark:text-iqblue
             xl:!text-xl lg:!text-center lg:!text=xl md:!text-xl sm:!text-xl"
             />
             <div className='text-md text-iqblue font-semibold'>
@@ -46,7 +46,7 @@ export default function LandingTwo() {
           >
             <div
               className="bg-iqblue text-light p-3 px-8 rounded-full text-lg font-semibold mb-4 
-             hover:bg-iqzone hover:text-iqblue
+             hover:bg-iqzone hover:text-iqblue 
               border-2 border-solid border-transparent hover:border-iqblue flex items-center justify-center"
             >
               IQ Zone

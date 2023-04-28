@@ -53,7 +53,7 @@ export default function LandingTwo() {
           <div className="text-center">
             <AnimatedText
               text="IQ Zone Uniforms"
-              className="!text-2xl text-iqblue
+              className="!text-2xl text-iqblue !dark:text-iqblue
             xl:!text-xl lg:!text-center lg:!text=xl md:!text-xl sm:!text-xl"
             />
             <div className='text-md text-iqblue font-semibold'>
