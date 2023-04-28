@@ -25,6 +25,20 @@ import FrequentlyQuestions from '@/components/Questions'
 
 export default function Home() {
 
+  const [isPhone, setIsPhone] = useState(false);
+  const phoneNumber = '7868901914';
+  const linkRef = useRef();
+
+  const handleClick = () => {
+    if (typeof window !== 'undefined') {
+      setIsPhone(/(android|iphone)/i.test(navigator.userAgent));
+    }
+    if (!isPhone) {
+      navigator.clipboard.writeText(phoneNumber);
+      alert('Number copied: ' + phoneNumber);
+    }
+  };
+
   return (
     <>
       <NavBar />
@@ -57,7 +71,7 @@ export default function Home() {
                 Your One-Stop Destination for Comprehensive Tutoring, School Supplies, and Uniforms
                 </p>
                 <div className='flex items-center self-start mt-2 lg:self-center'>
-                  <Link href="/dummy.pdf" target={"_blank"}
+                  <Link
                   className="flex items-center bg-dark text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                   border-2 border-solid border-transparent hover:border-dark
@@ -65,7 +79,10 @@ export default function Home() {
                   dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
                   hover:dark:border-light md:p-2 md:px-4 md:text-base
                   "
-                  download={true}
+                  href={`tel:${isPhone ? phoneNumber : ''}`}
+                  ref={linkRef}
+                  onClick={handleClick}
+
                   >Call<LinkArrow className={"w-6 ml-1"}/>
                   
                   </Link>
