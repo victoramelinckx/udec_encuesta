@@ -1,27 +1,27 @@
 export const exploreWorlds = [
   {
     id: 'world-1',
-    imgUrl: '/images/sections/planet-01.png',
+    imgUrl: '/images/sections/veamos.png',
     title: 'Tutoring One-On-One',
   },
   {
     id: 'world-2',
-    imgUrl: '/images/sections/planet-02.png',
+    imgUrl: '/images/sections/homeschool.png',
     title: 'Homeschool Program',
   },
   {
     id: 'world-3',
-    imgUrl: '/images/sections/planet-03.png',
+    imgUrl: '/images/sections/started.png',
     title: 'TOMATIS',
   },
   {
     id: 'world-4',
-    imgUrl: '/images/sections/planet-04.png',
+    imgUrl: '/images/sections/getstarted.png',
     title: 'Forbrain',
   },
   {
     id: 'Exams-Prep',
-    imgUrl: '/images/sections/planet-05.png',
+    imgUrl: '/images/sections/sat.png',
     title: 'Exams Prep',
   },
 ];
