@@ -1,39 +1,32 @@
-// pages/api/subscribe.js
-import axios from 'axios';
+const SibApiV3Sdk = require('sib-api-v3-sdk');
+
+
+const apiKey = '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';
+const listId = 2;
+
+const defaultClient = SibApiV3Sdk.ApiClient.instance;
+const apiKeyInstance = defaultClient.authentications['api-key'];
+apiKeyInstance.apiKey = apiKey;
+
+const apiInstance = new SibApiV3Sdk.ContactsApi();
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { email } = req.body;
 
-    if (!email) {
-      return res.status(400).json({ error: 'Email is required' });
-    }
+    const contact = {
+      email,
+      listIds: [parseInt(listId)],
+      updateEnabled: true,
+    };
 
     try {
-      const apiKey = '1f27e4024423aab49f54879cbe4de37a-us17';
-      const listId = 'ca6fc31049';
-      const mailchimpURL = `https://us17.api.mailchimp.com/3.0/lists/${listId}/members`;
-
-      await axios({
-        method: 'post',
-        url: mailchimpURL,
-        data: {
-          email_address: email,
-          status: 'subscribed',
-        },
-        headers: {
-          Authorization: `apikey ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-      });
-
-      return res.status(200).json({ success: 'Email added to MailChimp.' });
+      await apiInstance.createContact(contact);
+      res.status(200).json({ message: 'Email subscribed successfully' });
     } catch (error) {
-      console.error('Error adding email to MailChimp:', error.response.data);
-      return res.status(500).json({ error: 'Failed to add email to MailChimp' });
+      res.status(500).json({ message: 'Error subscribing email', error });
     }
   } else {
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+    res.status(405).json({ message: 'Method not allowed' });
   }
 }

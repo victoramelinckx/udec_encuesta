@@ -6,26 +6,21 @@ import { footerVariants } from '../../utils/motion';
 
 const GetInTouch = () => {
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [notification, setNotification] = useState(null);
 
-  const handleClick = async () => {
-    if (email) {
-      try {
-        await axios.post('/api/subscribe', { email });
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-        setEmail('');
-        setNotification('Form submitted and email added to MailChimp.');
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
 
-        setTimeout(() => {
-          setNotification(null);
-        }, 3000);
-      } catch (error) {
-        console.error('Error adding email to MailChimp:', error);
-      }
-    } else {
-      console.log('Please enter a valid email address');
-    }
-  };
+    const data = await res.json();
+    setMessage(data.message);
+  }
 
   return (
     <div className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
@@ -55,7 +50,7 @@ const GetInTouch = () => {
             />
     
             <div className="flex max-w-sm md:w-auto mt-5 md:mt-0">
-              <button type="button" onClick={handleClick} className="flex items-center w-full h-fit py-4 px-4 bg-dark/10 dark:bg-light/10 border border-solid dark:border-light hover:scale-105 rounded-[32px] gap-[12px]">
+              <button type="button" onClick={handleSubmit} className="flex items-center w-full h-fit py-4 px-4 bg-dark/10 dark:bg-light/10 border border-solid dark:border-light hover:scale-105 rounded-[32px] gap-[12px]">
                 <span className="font-bold text-[16px] text-dark dark:text-light">
                   Contact Us
                 </span>
