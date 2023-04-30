@@ -145,10 +145,10 @@ const QuestionItem = ({
         initial={{ y: 200 }}
         whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
         viewport={{ once: true }}
-        className="relative w-full p-4 py-6 my-2 rounded-xl flex items-center
+        className={`relative w-full p-4 py-6 my-2 rounded-xl flex items-center
           justify-between bg-light text-dark first:mt-0 border border-solid border-dark
           border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light
-          sm:flex-row cursor-pointer"
+          sm:flex-row cursor-pointer ${openedQuestion === index ? "!bg-dark/5 dark:!bg-light/5" : ""}`} // Conditionally apply "opacity-75" here
         onClick={handleClick}
       >
         <MovingImg title={title} img={img} width={width} height={height} />
@@ -165,8 +165,8 @@ const QuestionItem = ({
           initial={{ y: 200 }}
           whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
           viewport={{ once: true }}
-          className="relative w-full p-4 py-6 my-2 rounded-xl bg-light text-dark first:mt-0 border border-solid border-dark
-            border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light"
+          className={`relative w-full p-4 py-6 my-2 rounded-xl bg-light text-dark first:mt-0 border border-solid border-dark
+            border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light ${openedQuestion === index ? "!bg-dark/5 dark:!bg-light/5"  : ""}`} // Conditionally apply "opacity-75" here
           onClick={handleClick}
         >
           <p className=" text-l sm:text-sm font-semibold mb-2">
@@ -177,6 +177,7 @@ const QuestionItem = ({
     </>
   );
 };
+
   
 export default FrequentlyQuestions;
 
