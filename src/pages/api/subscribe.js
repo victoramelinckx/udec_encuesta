@@ -1,7 +1,7 @@
 const SibApiV3Sdk = require('sib-api-v3-sdk');
 
 
-const apiKey = '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';
+const apiKey = process.env.NEXT_PUBLIC_SENDINBLUE_API_KEY;
 const listId = 2;
 
 const defaultClient = SibApiV3Sdk.ApiClient.instance;
