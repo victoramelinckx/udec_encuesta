@@ -21,6 +21,9 @@ function TextReveal() {
   const text = "Experience the joy of learning, boost confidence, and achieve academic success with our expert tutors. Let's explore their bright future together!";
 
   useEffect(() => {
+    const isDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const textColor = isDarkMode ? "#FFFFFF" : "#2A2A2A";
+
     const anim = gsap.to(
       lettersRef.current,
       {
@@ -30,7 +33,7 @@ function TextReveal() {
           start: "top center",
           end: "bottom 85%",
         },
-        color: "#2A2A2A",
+        color: textColor, // The color will be set to white in dark mode and 2A2A2A in light mode.
         duration: 5,
         stagger: 1,
       }
@@ -48,11 +51,11 @@ function TextReveal() {
         <TypingText title="| About IQ Zone" textStyles="text-center dark:text-light/50" />
 
         <div className= {`${styles.innerWidth} mx-auto h-1/2 ${styles.flexCenter} flex-col`}></div>
-          <div className="bg-light pl-[10%] pr-[10%]">
+          <div className="bg-light dark:bg-dark pl-[10%] pr-[10%]">
             <div ref={triggerRef} className="text-center">
               {text.split("").map((letter, index) => (
                 <span
-                  className="font-bold text-7xl md:text-6xl sm:text-4xl xs:text-3xl leading- text-center text-dark/5 drop-shadow-sm"
+                  className="font-bold text-7xl md:text-6xl sm:text-4xl xs:text-3xl leading- text-center text-dark/5 dark:text-light/5 drop-shadow-sm"
                   key={index}
                   ref={setlettersRef}
                 >
