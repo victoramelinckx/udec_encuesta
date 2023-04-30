@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import Layout from '@/components/Layout'
 import Image from 'next/image'
 import profilePic from "../../public/images/profile/prueba.svg"
-import coreImage from "../../public/iqzonep.png"
+import coreImage from "../../public/iqzoneCom.png"
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import { LinkArrow } from '@/components/Icons'

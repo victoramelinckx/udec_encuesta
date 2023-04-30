@@ -18,7 +18,7 @@ const GetStarted = () => (
         className={`flex-1 ${styles.flexCenter}`}
       >
         <Image
-        src="/images/get-started.png"
+        src="/book22.png"
         width={600}
         height={600}
         alt="Descripción de la imagen"
