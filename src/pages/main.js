@@ -23,6 +23,7 @@ import GetInTouch from '@/components/getInTouch'
 import MyGoogleMap from '@/components/GoogleMaps'
 import ContactUs from '@/components/ContactUs';
 import FrequentlyQuestions from '@/components/Questions'
+import TextReveal from '@/components/sections/aboutTwo';
 
 
 export default function Home() {
@@ -103,7 +104,7 @@ export default function Home() {
       </main>
       
       <div className='relative'>
-        <About />
+        <TextReveal />
         <GetStarted />
         <Explore />
       </div>
