@@ -20,6 +20,16 @@ const GetInTouch = () => {
 
     const data = await res.json();
     setMessage(data.message);
+
+    // Handle response and update notification state
+    if (res.status === 200) {
+      setNotification('Email received.');
+    } else {
+      setNotification('Invalid email or something went wrong.');
+    }
+
+    // Reset email input field
+    setEmail('');
   }
 
   return (
@@ -35,7 +45,7 @@ const GetInTouch = () => {
             Get in touch with us
           </h4>
           {notification && (
-            <div className="text-center text-green-500 mb-4">
+            <div className="text-center text-green-500">
               {notification}
             </div>
           )}

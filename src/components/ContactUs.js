@@ -8,50 +8,30 @@ const GetInTouch = () => {
   const [name, setName] = useState('');
   const [subject, setSubject] = useState('');
   const [number, setNumber] = useState('');
+  const [notification, setNotification] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email && name && subject && number) {
-      const apiKey = '1f27e4024423aab49f54879cbe4de37a-us17';
-      const listId = 'ca6fc31049';
-      const mailchimpURL = `https://us17.api.mailchimp.com/3.0/lists/${listId}/members`;
-  
-      const subscriber = {
-        email_address: email,
-        status: 'subscribed',
-        merge_fields: {
-          FNAME: name,
-          PHONE: number,
-          SUBJECT: subject,
-        },
-      };
-  
-      const requestOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `apikey ${apiKey}`,
-        },
-        body: JSON.stringify(subscriber),
-      };
-  
-      try {
-        const response = await fetch(mailchimpURL, requestOptions);
-        if (response.ok) {
-          console.log('Form submitted:', { email, name, subject, number });
-          setEmail('');
-          setName('');
-          setSubject('');
-          setNumber('');
-        } else {
-          console.log('Error submitting form:', response.status, response.statusText);
-        }
-      } catch (error) {
-        console.error('Error:', error);
-      }
+
+    // Update the API endpoint and request payload according to your implementation
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, number, subject }),
+    });
+
+    // Handle response and update notification state
+    if (res.status === 200) {
+      setNotification('Message sent successfully.');
     } else {
-      console.log('Please fill out all the fields');
+      setNotification('Invalid input or something went wrong.');
     }
+
+    // Reset input fields
+    setName('');
+    setEmail('');
+    setNumber('');
+    setSubject('');
   };
   
 
@@ -67,6 +47,11 @@ const GetInTouch = () => {
           <h4 className="font-bold md:text-[40px] md:text-center text-[44px] text-dark dark:text-light">
             Get in touch with us
           </h4>
+          {notification && (
+            <div className="text-center text-green-500">
+              {notification}
+            </div>
+          )}
           <form onSubmit={handleSubmit} className="flex flex-col md:items-center gap-5">
             <input
               type="text"
