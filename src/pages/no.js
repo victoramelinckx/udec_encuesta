@@ -39,7 +39,7 @@ const No = () => {
         setInputValue('');
         setTimeout(() => {
           router.push('/gracias');
-        }, 2000);
+        }, 1000);
       } else {
         console.error('Error al enviar el correo electrónico');
       }
