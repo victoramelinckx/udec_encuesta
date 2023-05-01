@@ -2,10 +2,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
-import Logo from '@/components/Logo';
 import AnimatedText from '@/components/AnimatedText';
-import { TypingText } from '@/components/context/othersComponents';
-import styles from '@/components/context/styless';
+
 
 export default function LandingTwo() {
   return (
@@ -19,52 +17,51 @@ export default function LandingTwo() {
         Showcase your skills as a full-stack developer and software engineer."
         />
       </Head>
-      <TransitionEffect />
-      <div className="flex flex-col items-center min-h-screen bg-iqblue/10">
-        <div className="flex justify-center w-full mt-20">
-          <Logo />
-        </div>
-        <div className="pt-10">
+      <div className="flex flex-col items-center min-h-screen bg-dark">
+        <div className="pt-60">
           <div className="text-center">
             <AnimatedText
-              text="IQ Zone"
-              className="!text-2xl text-iqblue dark:!text-iqblue
+              text="Pregunta rápida"
+              className="!text-2xl !text-light/90
             xl:!text-xl lg:!text-center lg:!text=xl md:!text-xl sm:!text-xl"
             />
-            <div className='text-md text-iqblue font-semibold'>
-            Your Child is Our Priority!
-            </div>
+              <div
+                className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
+               flex items-center justify-center"
+              >
+                ¿Eres dueño de alguna empresa?
+              </div>
           </div>
         </div>
 
-        <div className='w-[20%] lg:w-[45%] md:w-[40%] sm:w-[65%] justify-center pt-10'>
-        <Link href="/store" passHref>
+        <div className='w-[20%] lg:w-[30%] md:w-[30%] sm:w-[30%] flex flex-row justify-center pt-2 space-x-4'>
+        <Link href="/si" passHref>
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full cursor-pointer"
+            className="cursor-pointer"
           >
             <div
-              className="bg-iqblue text-light p-3 px-8 rounded-full text-lg font-semibold mb-4 
-             hover:bg-iqzone hover:text-iqblue 
-              border-2 border-solid border-transparent hover:border-iqblue flex items-center justify-center"
+              className="bg-light/90 text-dark p-3 px-6 rounded-full text-lg font-semibold mb-4 
+             hover:bg-dark hover:text-light/90
+              border-2 border-solid border-transparent hover:border-light/90 flex items-center justify-center"
             >
-              IQ Zone
+              Si
             </div>
           </motion.div>
         </Link>
-        <Link href="/main" passHref>
+        <Link href="/no" passHref>
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
             className="w-full cursor-pointer"
           >
             <div
-              className="bg-iqblue text-light p-3 px-8 rounded-full text-lg font-semibold mb-4 
-              hover:bg-iqzone hover:text-iqblue
-               border-2 border-solid border-transparent hover:border-iqblue flex items-center justify-center"
+              className="bg-light/90 text-dark p-3 px-6 rounded-full text-lg font-semibold mb-4 
+             hover:bg-dark hover:text-light/90
+              border-2 border-solid border-transparent hover:border-light/90 flex items-center justify-center"
             >
-              IQ Zone Plus
+              No
             </div>
           </motion.div>
         </Link>

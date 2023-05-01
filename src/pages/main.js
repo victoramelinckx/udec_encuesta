@@ -28,20 +28,6 @@ import TextReveal from '@/components/sections/aboutTwo';
 
 export default function Home() {
 
-  const [isPhone, setIsPhone] = useState(false);
-  const phoneNumber = '7868901914';
-  const linkRef = useRef();
-
-  const handleClick = () => {
-    if (typeof window !== 'undefined') {
-      setIsPhone(/(android|iphone)/i.test(navigator.userAgent));
-    }
-    if (!isPhone) {
-      navigator.clipboard.writeText(phoneNumber);
-      alert('Number copied: ' + phoneNumber);
-    }
-  };
-
   return (
     <>
       <NavBar />
