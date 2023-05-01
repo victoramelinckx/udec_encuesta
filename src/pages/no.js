@@ -76,6 +76,6 @@ const No = () => {
   )
 }
 
-export default no
+export default No
 
 
