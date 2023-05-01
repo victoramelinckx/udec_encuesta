@@ -1,14 +1,18 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText';
-import { useState } from 'react';
-import sendEmail from './api/sendinblue';
+import { useRouter } from 'next/router';
+
+
 
 const Si = () => {
   
   const [inputValue, setInputValue] = useState('');
+  const router = useRouter();
+
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -17,8 +21,31 @@ const Si = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Texto enviado:', inputValue);
-    await sendEmail('vickx2000@gmail.com', inputValue);
-    setInputValue('');
+  
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          toEmail: 'vdavilaamelinckx@gmail.com',
+          textContent: inputValue,
+        }),
+      });
+  
+      if (response.ok) {
+        console.log('Email enviado correctamente');
+        setInputValue('');
+        setTimeout(() => {
+          router.push('/gracias');
+        }, 2000);
+      } else {
+        console.error('Error al enviar el correo electrónico');
+      }
+    } catch (error) {
+      console.error('Error al enviar el correo electrónico:', error);
+    }
   };
   
   return (
@@ -38,8 +65,7 @@ const Si = () => {
                 className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
                flex items-center justify-center"
               >
-                ¿Qué problemas tienes en tu empresa que te impide generar más ingresos?
-              </div>
+              ¿Qué problemas enfrentas en tu empresa que te impiden generar más ingresos?              </div>
           </div>
         </div>
 
@@ -56,7 +82,7 @@ const Si = () => {
                 rows={3}
               />
 
-              <div className="flex">
+              <div className="flex justify-center">
                 <button
                   type="submit"
                   className="flex items-center h-fit py-3 px-4 bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]"
@@ -76,4 +102,4 @@ const Si = () => {
   )
 }
 
-export default Si
+export default Si;

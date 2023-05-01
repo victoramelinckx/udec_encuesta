@@ -9,7 +9,7 @@ export default function LandingTwo() {
   return (
     <>
       <Head>
-        <title>IQ Zone Tutoring and School Supplies Website</title>
+        <title>Encuesta</title>
         <meta
           name="landing"
           content="Explore CodeBucks's Next.js developer portfolio and 
