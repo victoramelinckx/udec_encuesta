@@ -6,7 +6,7 @@ import AnimatedText from '@/components/AnimatedText';
 import { useState } from 'react';
 import sendEmail from './api/sendinblue';
 
-const no = () => {
+const No = () => {
   
   
   const [inputValue, setInputValue] = useState('');
