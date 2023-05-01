@@ -76,4 +76,4 @@ const Si = () => {
   )
 }
 
-export default si
+export default Si
