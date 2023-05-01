@@ -35,7 +35,7 @@ export default function LandingTwo() {
         </div>
 
         <div className='w-[20%] lg:w-[30%] md:w-[30%] sm:w-[30%] flex flex-row justify-center pt-2 space-x-4'>
-        <Link href="/si" passHref>
+        <Link href="/Si" passHref>
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
@@ -50,7 +50,7 @@ export default function LandingTwo() {
             </div>
           </motion.div>
         </Link>
-        <Link href="/no" passHref>
+        <Link href="/No" passHref>
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
