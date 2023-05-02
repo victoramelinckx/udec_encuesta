@@ -59,7 +59,7 @@ const GetInTouch = () => {
             <div className="flex max-w-sm md:w-auto mt-5 md:mt-0">
               <button type="button" onClick={handleSubmit} className="flex items-center w-full h-fit py-4 px-4 bg-dark/10 dark:bg-light/10 border border-solid dark:border-light hover:scale-105 rounded-[32px] gap-[12px]">
                 <span className="font-bold text-[16px] text-dark dark:text-light">
-                  Contact Us
+                  Enviar
                 </span>
               </button>
             </div>
