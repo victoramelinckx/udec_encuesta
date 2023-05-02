@@ -27,15 +27,14 @@ export default function LandingTwo() {
               className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
               flex items-center justify-center"
             >
-              Descubre el principal obstáculo para el éxito y crecimiento de tu empresa
+              Encuesta universitaria
             </div>
 
               <div
                 className="p-3 px-8 text-lg text-light/90 font-normal mb-4 
                flex items-center justify-center md:!text-base sm:!text-sm"
               >
-                ¿Eres dueño de una compañia o un alto ejecutivo? ¡Nos encantaría conocer tu opinión! Esta breve encuesta te ayudará a reflexionar sobre los principales desafíos que enfrenta tu negocio. Además, al completarla, recibirás un informe exclusivo con insights y estrategias para superar estos obstáculos. ¡Toma menos de 2 minutos!
-              </div>
+              Antes de iniciar, queremos expresar nuestro agradecimiento por tu tiempo y disposición. El propósito de esta encuesta es identificar los desafíos más significativos a los que se enfrentan las empresas en el mercado actual, así como las soluciones que se han aplicado o podrían implementarse para superar dichos obstáculos. Apreciamos tu sinceridad al responder las preguntas. Te aseguramos que toda la información proporcionada en esta encuesta se mantendrá confidencial y se empleará exclusivamente con fines académicos en el contexto de un proyecto universitario.              </div>
           </div>
         </div>
 

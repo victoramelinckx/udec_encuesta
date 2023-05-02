@@ -66,14 +66,14 @@ const Gracias = () => {
               className="p-3 px-8 text-2xl text-light/90 font-semibold 
               flex items-center justify-center"
             >
-              ¡Gracias por compartir tu experiencia!
+              ¡Gracias por tu tiempo!
             </div>
 
             <div
               className="p-3 px-8 text-lg text-light/90 font-normal mb-4 
               flex items-center justify-center md:!text-base sm:!text-sm"
             >
-              No olvides enviar el enlace a colegas y amigos empresarios. Muy pronto recibirás un informe exclusivo con estrategias e insights para impulsar tu éxito empresarial. 
+              No olvides compartir el enlace a colegas y amigos. Dejanos tu email si estas interesado en los resultados de este estudio.
             </div>
             <GetInTouch onSubmitEmail={handleEmailSubmitted} />
           </div>
