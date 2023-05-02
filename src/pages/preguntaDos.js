@@ -9,6 +9,8 @@ import { useRouter } from 'next/router';
 const PreguntaDos = () => {
   const router = useRouter();
   const selectedArea = router.query.data;
+  const areaText = router.query.areaText;
+
   const options = {
     ventas: [
       'Generación de tráfico de clientes potenciales',
@@ -83,7 +85,7 @@ const PreguntaDos = () => {
         <div className="pt-vh-20">
           <div className="text-center">
             <div className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 flex items-center justify-center md:!text-base sm:!text-sm">
-              Dentro de la opción seleccionada, el PRINCIPAL obstáculo es:{' '}
+              Dentro del {areaText}, el PRINCIPAL obstáculo es:{' '}
             </div>
           </div>
         </div>

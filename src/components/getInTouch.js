@@ -38,12 +38,9 @@ const GetInTouch = () => {
         variants={footerVariants}
         initial="hidden"
         whileInView="show"
-        className={`${styles.xPaddings} py-12 relative max-w-7xl mx-auto`}
+        className={`${styles.xPaddings} relative max-w-7xl mx-auto`}
       >
         <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
-          <h4 className="font-bold text-[44px] md:text-[40px] md:text-center text-dark dark:text-light">
-            Get in touch with us
-          </h4>
           {notification && (
             <div className="text-center text-green-500">
               {notification}
