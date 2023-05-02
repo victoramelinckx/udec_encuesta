@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { TypingText } from '@/components/context/othersComponents';
 
 const PreguntaTres = () => {
   const [inputValue, setInputValue] = useState('');
@@ -21,7 +22,7 @@ const PreguntaTres = () => {
 
     router.push({
       pathname: '/preguntaCuatro',
-      query: { combinedData },
+      query: { area, combinedData },
     });
   };
 
@@ -35,6 +36,7 @@ const PreguntaTres = () => {
       <TransitionEffect />
       <div className="flex flex-col items-center min-h-screen bg-dark">
         <div className="pt-vh-20">
+          <TypingText title={`| ${area}`} textStyles="text-center text-xs text-light/40" />
           <div className="text-center">
             <div
               className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 

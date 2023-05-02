@@ -9,7 +9,11 @@ const PreguntaUno = () => {
   const router = useRouter();
 
   const handleClick = (dataName, areaText) => {
-    router.push(`/preguntaDos?data=${dataName}&areaText=${encodeURIComponent(areaText)}`);
+    if (dataName === 'otras') {
+      router.push(`/preguntaDosVersion?areaText=${encodeURIComponent(areaText)}`);
+    } else {
+      router.push(`/preguntaDos?data=${dataName}&areaText=${encodeURIComponent(areaText)}`);
+    }
   };
 
   return (
@@ -36,11 +40,12 @@ const PreguntaUno = () => {
           <div className={`mx-auto flex flex-col space-y-2`}>
           {
             [
-              { text: 'Área de ventas y marketing', id: 'ventas' },
-              { text: 'Área de producción y operaciones', id: 'financiera' },
-              { text: 'Área de recursos humanos y talento', id: 'produccion' },
-              { text: 'Área informática (data)', id: 'humanos' },
-              { text: 'Otras áreas no mencionadas', id: 'data' },
+              { text: 'Ventas y marketing', id: 'ventas' },
+              { text: 'Finanzas y administración', id: 'financiera' },
+              { text: 'Producción y operaciones', id: 'produccion' },
+              { text: 'Recursos humanos y talento', id: 'humanos' },
+              { text: 'Informática y data', id: 'data' },
+              { text: 'Otras áreas no mencionadas', id: 'otras' },
             ].map((area, index) => (
               <motion.div
                 key={index}

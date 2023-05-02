@@ -5,6 +5,7 @@ import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText';
 import { useRouter } from 'next/router';
+import { TypingText } from '@/components/context/othersComponents';
 
 const PreguntaDos = () => {
   const router = useRouter();
@@ -55,7 +56,7 @@ const PreguntaDos = () => {
         <Link
           href={{
             pathname: '/preguntaTres',
-            query: { area: selectedArea, data: option },
+            query: { area: areaText, data: option },
           }}
           passHref
           key={option}
@@ -83,9 +84,10 @@ const PreguntaDos = () => {
       <TransitionEffect />
       <div className="flex flex-col items-center min-h-screen bg-dark">
         <div className="pt-vh-20">
+          <TypingText title={`| ${areaText}`} textStyles="text-center text-xs text-light/40" />
           <div className="text-center">
             <div className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 flex items-center justify-center">
-              Dentro del {areaText}, el PRINCIPAL obstáculo es:{' '}
+              Dentro del área de {areaText}, el PRINCIPAL obstáculo es:{' '}
             </div>
           </div>
         </div>
