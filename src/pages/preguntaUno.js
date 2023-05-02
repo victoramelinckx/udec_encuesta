@@ -24,7 +24,7 @@ const PreguntaUno = () => {
           <div className="text-center">
             <div
               className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
-               flex items-center justify-center md:!text-base sm:!text-sm"
+               flex items-center justify-center"
             >
               El principal obstáculo para el éxito y crecimiento de mi empresa se
               encuentra en el área de:
@@ -50,7 +50,7 @@ const PreguntaUno = () => {
                 onClick={() => handleClick(area.id, area.text)}
               >
                 <div
-                  className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-xs text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]"
+                  className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-sm text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]"
                 >
                   {area.text}
                 </div>

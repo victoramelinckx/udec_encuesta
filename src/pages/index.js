@@ -21,7 +21,7 @@ export default function LandingTwo() {
       <div className="flex flex-col items-center min-h-screen bg-dark">
         <div className="pt-vh-20">
 
-          <div className="text-center pl-[30%] pr-[30%] md:pl-[10%] md:pr-[10%]">
+          <div className="text-center pl-[30%] pr-[30%] md:pl-[5%] md:pr-[5%] ">
             
             <div
               className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 

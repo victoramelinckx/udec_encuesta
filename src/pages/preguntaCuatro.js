@@ -39,15 +39,16 @@ const PreguntaCuatro = () => {
       <div className="flex flex-col items-center min-h-screen bg-dark">
         <div className="pt-vh-20">
           <div className="text-center">
-              <div
-                className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
-               flex items-center justify-center"
-              >
-            ¿Qué soluciones has considerado para enfrentar este desafío?</div>
+            <div
+              className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
+              flex items-center justify-center"
+            >
+            ¿Qué soluciones has considerado para enfrentar este desafío?
+            </div>
           </div>
         </div>
 
-        <div className='w-[20%] lg:w-[30%] md:w-[30%] sm:w-[30%] flex flex-row justify-center pt-2 text-center space-x-4'>
+        <div className='w-[20%] lg:w-[35%] md:w-[35%] sm:w-[40%] flex flex-row justify-center pt-2 text-center space-x-4'>
        
           <div className={`mx-auto flex flex-col gap-6`}>
 

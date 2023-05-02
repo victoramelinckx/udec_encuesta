@@ -23,7 +23,7 @@ const Gracias = () => {
         <div className="pt-vh-20">
           <div className="text-center">
             <div
-              className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
+              className="p-3 px-8 text-2xl text-light/90 font-semibold 
               flex items-center justify-center"
             >
               ¡Gracias por compartir tu experiencia!

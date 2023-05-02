@@ -66,7 +66,7 @@ const PreguntaCinco = () => {
           </div>
         </div>
 
-        <div className='w-[20%] lg:w-[30%] md:w-[30%] sm:w-[30%] flex flex-row justify-center pt-2 text-center space-x-4'>
+        <div className='w-[20%] lg:w-[35%] md:w-[35%] sm:w-[40%] flex flex-row justify-center pt-2 text-center space-x-4'>
        
           <div className={`mx-auto flex flex-col gap-6`}>
 

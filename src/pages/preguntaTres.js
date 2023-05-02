@@ -38,14 +38,14 @@ const PreguntaTres = () => {
           <div className="text-center">
             <div
               className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 
-               flex items-center justify-center md:!text-base sm:!text-sm"
+               flex items-center justify-center"
             >
               ¿Cómo está afectando este problema el éxito y crecimiento de tu empresa?
             </div>
           </div>
         </div>
 
-        <div className="w-[20%] lg:w-[30%] md:w-[40%] sm:w-[60%] flex flex-row justify-center pt-2 text-center space-x-4">
+        <div className="w-[20%] lg:w-[35%] md:w-[35%] sm:w-[40%] flex flex-row justify-center pt-2 text-center space-x-4">
           <div className={`mx-auto flex flex-col gap-6`}>
             <form
               onSubmit={handleSubmit}

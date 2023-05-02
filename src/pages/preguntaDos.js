@@ -65,7 +65,7 @@ const PreguntaDos = () => {
             whileTap={{ scale: 0.95 }}
             className="cursor-pointer"
           >
-            <div className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-xs text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]">
+            <div className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-sm text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]">
               {option}
             </div>
           </motion.div>
@@ -84,7 +84,7 @@ const PreguntaDos = () => {
       <div className="flex flex-col items-center min-h-screen bg-dark">
         <div className="pt-vh-20">
           <div className="text-center">
-            <div className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 flex items-center justify-center md:!text-base sm:!text-sm">
+            <div className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 flex items-center justify-center">
               Dentro del {areaText}, el PRINCIPAL obstáculo es:{' '}
             </div>
           </div>
