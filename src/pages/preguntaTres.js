@@ -57,8 +57,9 @@ const PreguntaTres = () => {
                 value={inputValue}
                 onChange={handleInputChange}
                 className="py-4 px-6 bg-light/10 rounded-[32px] text-light flex-grow"
-                placeholder="Enter the subject"
-                rows={3}
+                placeholder="Breve descripción"
+                rows={5}
+                required
               />
 
               <div className="flex justify-center">

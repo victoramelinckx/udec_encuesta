@@ -52,7 +52,7 @@ const GetInTouch = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="py-4 px-6 bg-dark/10 dark:bg-light/10 rounded-[32px] text-dark dark:text-light flex-grow"
-              placeholder="Enter your email"
+              placeholder="Email"
               required
             />
     

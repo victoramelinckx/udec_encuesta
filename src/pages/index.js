@@ -34,7 +34,7 @@ export default function LandingTwo() {
                 className="p-3 px-8 text-lg text-light/90 font-normal mb-4 
                flex items-center justify-center md:!text-base sm:!text-sm"
               >
-                ¿Eres dueño de una empresa o un alto ejecutivo? ¡Nos encantaría conocer tu opinión! Esta breve encuesta te ayudará a reflexionar sobre los principales desafíos que enfrenta tu empresa. Además, al completarla, recibirás un informe exclusivo con insights y estrategias para superar estos obstáculos. ¡Toma menos de 2 minutos!
+                ¿Eres dueño de una compañia o un alto ejecutivo? ¡Nos encantaría conocer tu opinión! Esta breve encuesta te ayudará a reflexionar sobre los principales desafíos que enfrenta tu negocio. Además, al completarla, recibirás un informe exclusivo con insights y estrategias para superar estos obstáculos. ¡Toma menos de 2 minutos!
               </div>
           </div>
         </div>

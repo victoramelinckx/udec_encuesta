@@ -87,7 +87,7 @@ const PreguntaDos = () => {
           <TypingText title={`| ${areaText}`} textStyles="text-center text-xs text-light/40" />
           <div className="text-center">
             <div className="p-3 px-8 text-lg text-light/90 font-semibold mb-4 flex items-center justify-center">
-              Dentro del área de {areaText}, el PRINCIPAL obstáculo es:{' '}
+              Dentro de las áreas de {areaText}, el PRINCIPAL obstáculo es:{' '}
             </div>
           </div>
         </div>

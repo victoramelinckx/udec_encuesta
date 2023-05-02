@@ -31,7 +31,7 @@ const PreguntaUno = () => {
                flex items-center justify-center"
             >
               El principal obstáculo para el éxito y crecimiento de mi empresa se
-              encuentra en el área de:
+              encuentra en las áreas de:
             </div>
           </div>
         </div>
