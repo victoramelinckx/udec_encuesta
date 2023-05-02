@@ -30,7 +30,7 @@ const Gracias = () => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              toEmail: 'vickx2000@gmail.com',
+              toEmail: 'contentwars2023@gmail.com',
               textContent: updatedFinalData,
             }),
           });
