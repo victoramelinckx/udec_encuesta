@@ -15,7 +15,7 @@ const PreguntaUno = () => {
   return (
     <>
       <Head>
-        <title>Encuesta</title>
+        <title>Primera Pregunta</title>
         <meta name="landing si" content="Encuesta para Money Trip" />
       </Head>
       <TransitionEffect />

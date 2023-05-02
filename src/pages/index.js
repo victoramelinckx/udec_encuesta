@@ -9,7 +9,7 @@ export default function LandingTwo() {
   return (
     <>
       <Head>
-        <title>Encuesta</title>
+        <title>Corta Encuesta</title>
         <meta
           name="landing"
           content="Explore CodeBucks's Next.js developer portfolio and 

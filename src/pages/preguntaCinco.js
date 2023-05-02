@@ -48,7 +48,7 @@ const PreguntaCinco = () => {
   return (
     <>
       <Head>
-        <title>Encuesta</title>
+        <title>Ultima Pregunta</title>
         <meta
           name="landing si"
           content="Encuesta para Money Trip"
