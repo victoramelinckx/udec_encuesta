@@ -28,6 +28,11 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 8s linear infinite',
       },
+      spacing: {
+        'vh-10': '10vh',
+        'vh-20': '20vh',
+        'vh-30': '30vh', // Add this line
+      },
       transitionTimingFunction: {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',
       },
