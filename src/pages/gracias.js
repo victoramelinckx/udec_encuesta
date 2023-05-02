@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
@@ -9,6 +9,46 @@ import { useRouter } from 'next/router';
 import GetInTouch from '@/components/getInTouch';
 
 const Gracias = () => {
+
+  const [emailSubmitted, setEmailSubmitted] = useState('');
+  const router = useRouter();
+  const { finalData } = router.query;
+
+  const handleEmailSubmitted = (email) => {
+    setEmailSubmitted(email);
+  };
+
+  useEffect(() => {
+    if (emailSubmitted) {
+      const updatedFinalData = `${finalData}, Email: ${emailSubmitted}`;
+      // Send updatedFinalData using SendinBlue
+      const sendEmail = async () => {
+        try {
+          const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              toEmail: 'vickx2000@gmail.com',
+              textContent: updatedFinalData,
+            }),
+          });
+
+          if (response.ok) {
+            console.log('Email enviado correctamente');
+          } else {
+            console.error('Error al enviar el correo electrónico');
+          }
+        } catch (error) {
+          console.error('Error al enviar el correo electrónico:', error);
+        }
+      };
+
+      sendEmail();
+    }
+  }, [emailSubmitted]);
+
   return (
     <>
       <Head>
@@ -35,7 +75,7 @@ const Gracias = () => {
             >
               No olvides enviar el enlace a colegas y amigos empresarios. Muy pronto recibirás un informe exclusivo con estrategias e insights para impulsar tu éxito empresarial. 
             </div>
-            <GetInTouch/>
+            <GetInTouch onSubmitEmail={handleEmailSubmitted} />
           </div>
         </div>
       </div>

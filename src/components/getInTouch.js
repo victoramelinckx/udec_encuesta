@@ -4,7 +4,7 @@ import axios from 'axios';
 import styles from '../components/context/styless';
 import { footerVariants } from '../../utils/motion';
 
-const GetInTouch = () => {
+const GetInTouch = ({ onSubmitEmail }) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [notification, setNotification] = useState(null);
@@ -21,14 +21,13 @@ const GetInTouch = () => {
     const data = await res.json();
     setMessage(data.message);
 
-    // Handle response and update notification state
     if (res.status === 200) {
       setNotification('Email received.');
+      onSubmitEmail(email); // Call the onSubmitEmail function
     } else {
       setNotification('Invalid email or something went wrong.');
     }
 
-    // Reset email input field
     setEmail('');
   }
 

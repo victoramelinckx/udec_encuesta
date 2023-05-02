@@ -8,6 +8,7 @@ import { TypingText } from '@/components/context/othersComponents';
 
 const PreguntaCinco = () => {
   const [inputValue, setInputValue] = useState('');
+  const [rubroValue, setRubroValue] = useState(''); 
   const router = useRouter();
   const { area, updatedData } = router.query;
 
@@ -15,9 +16,13 @@ const PreguntaCinco = () => {
     setInputValue(e.target.value);
   };
 
+  const handleRubroChange = (e) => { // Add this function
+    setRubroValue(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const finalData = `${updatedData}, ${inputValue}`;
+    const finalData = `${updatedData}, ${inputValue}, Rubro: ${rubroValue}`; // Include rubroValue
     console.log('Final Data:', finalData);
 
     try {
@@ -35,8 +40,12 @@ const PreguntaCinco = () => {
       if (response.ok) {
         console.log('Email enviado correctamente');
         setInputValue('');
+        setRubroValue('');
         setTimeout(() => {
-          router.push('/gracias');
+          router.push({
+            pathname: '/gracias',
+            query: { finalData },
+          });
         }, 1000);
       } else {
         console.error('Error al enviar el correo electrónico');
@@ -79,6 +88,14 @@ const PreguntaCinco = () => {
                 className="py-4 px-6 bg-light/10 rounded-[32px] text-light flex-grow"
                 placeholder="Breve descripción"
                 rows={5}
+                required
+              />
+              <textarea
+                value={rubroValue} // Update this line
+                onChange={handleRubroChange} // Update this line
+                className="py-4 px-6 bg-light/10 rounded-[32px] text-light flex-grow"
+                placeholder="Rubro de tu empresa"
+                rows={1}
                 required
               />
 
