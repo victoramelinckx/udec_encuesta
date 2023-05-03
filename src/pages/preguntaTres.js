@@ -33,7 +33,7 @@ const PreguntaTres = () => {
         <title>Tercera Pregunta</title>
         <meta name="landing si" content="Encuesta para Money Trip" />
       </Head>
-      <TransitionEffect />
+
       <div className="flex flex-col items-center min-h-screen bg-dark">
         <div className="pt-vh-20">
           <TypingText title={`| ${area}`} textStyles="text-center text-xs text-light/40" />

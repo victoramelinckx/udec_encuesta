@@ -66,7 +66,7 @@ const PreguntaDos = () => {
             whileTap={{ scale: 0.95 }}
             className="cursor-pointer"
           >
-            <div className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-sm text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]">
+            <div className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-sm-custom text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]">
               {option}
             </div>
           </motion.div>
@@ -81,7 +81,7 @@ const PreguntaDos = () => {
         <title>Segunda Pregunta</title>
         <meta name="landing si" content="Encuesta para Money Trip" />
       </Head>
-      <TransitionEffect />
+
       <div className="flex flex-col items-center min-h-screen bg-dark">
         <div className="pt-vh-20">
           <TypingText title={`| ${areaText}`} textStyles="text-center text-xs text-light/40" />

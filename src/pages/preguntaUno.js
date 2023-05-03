@@ -55,7 +55,7 @@ const PreguntaUno = () => {
                 onClick={() => handleClick(area.id, area.text)}
               >
                 <div
-                  className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-sm text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]"
+                  className="flex items-center justify-center h-fit py-3 px-4 text-lg md:!text-sm sm:!text-sm-custom text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]"
                 >
                   {area.text}
                 </div>

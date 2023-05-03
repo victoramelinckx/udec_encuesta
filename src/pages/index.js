@@ -46,7 +46,7 @@ export default function LandingTwo() {
             className="cursor-pointer"
           >
             <div
-              className="flex items-center h-fit py-3 px-4 text-lg md:!text-base sm:!text-sm text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]"
+              className="flex items-center h-fit py-3 px-4 text-lg md:!text-base sm:!text-sm-custom text-light bg-dark/10 border border-solid border-light/90 hover:scale-105 rounded-[32px] gap-[12px]"
             >
               Continuar
             </div>
