@@ -34,7 +34,7 @@ export default function LandingTwo() {
                 className="p-3 px-8 text-lg text-light/90 font-normal mb-4 
                flex items-center justify-center md:!text-base sm:!text-sm"
               >
-              Antes de iniciar, queremos expresar nuestro agradecimiento por tu tiempo y disposición. El propósito de esta encuesta es identificar los desafíos más significativos a los que se enfrentan las empresas en el mercado actual, así como las soluciones que se han aplicado o podrían implementarse para superar dichos obstáculos. Apreciamos tu sinceridad al responder las preguntas. Te aseguramos que toda la información proporcionada en esta encuesta se mantendrá confidencial y se empleará exclusivamente con fines académicos en el contexto de un proyecto universitario.              </div>
+              El propósito de esta encuesta es identificar los desafíos más significativos a los que se enfrentan las empresas en el mercado actual. Tiempo de finalización: 2 minutos.              </div>
           </div>
         </div>
 
